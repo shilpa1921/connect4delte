@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+}
+
+header {
+    border: 5px tomato dotted;
+    padding: 30px;
+    height: 100px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+#menu-button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}

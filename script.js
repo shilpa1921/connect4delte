@@ -1,3 +1,5 @@
+fizzbuzz();
+
 function fizzbuzz() {
     for (var i = 1; i <= 100; i++) {
         if (i % 3 == 0) {
@@ -14,4 +16,18 @@ function fizzbuzz() {
             }
         }
     }
+    console.log(9 % 3);
+
+    var n;
+    n = 10 % 3;
+    console.log(n);
+    n = 2;
+    console.log(n);
+
+    console.log(null + false);
+
+    console.log(typeof "text");
+    console.log('shilpa"s');
+
+    console.log(typeof 9);
 }
