@@ -22,11 +22,6 @@ function logType(arg) {
     } else {
         console.log("I have no idea!");
     }
-}
-
-logType(12);
-
-function objaCopyTob() {
     var a = {
         Berlin: "Germany",
         Paris: "France",
@@ -38,14 +33,10 @@ function objaCopyTob() {
         b[a[key]] = key;
     }
     console.log(b);
-}
 
-objaCopyTob();
-
-function countDown() {
     for (let i = 10; i > 0; i--) {
         console.log(i);
     }
 }
 
-countDown();
+logType(12);
