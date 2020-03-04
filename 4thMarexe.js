@@ -22,8 +22,8 @@ function toCheckNumber(num) {
 toCheckNumber(10);
 
 setTimeout(function() {
+    console.log("Hello!");
     setTimeout(function() {
         console.log("Goodbye");
     }, 1500);
-    console.log("Hello!");
 }, 1500);
