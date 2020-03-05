@@ -10,7 +10,7 @@ var sumOfNum = sum(10, 20, 40);
 console.log("Sum is " + sumOfNum);
 
 function toCheckNumber(num) {
-    if (num <= 0 || isNaN(NaN) == Number.isNaN(num)) {
+    if (num <= 0 || isNaN(Number(num))) {
         return "ERROR";
     } else if (num >= 1000000) {
         return num;
@@ -20,7 +20,7 @@ function toCheckNumber(num) {
     }
 }
 
-var numProduced = toCheckNumber(10);
+var numProduced = toCheckNumber("asd");
 console.log("The Number is " + numProduced);
 
 function waitThenRun() {
@@ -31,3 +31,5 @@ function waitThenRun() {
         }, 1500);
     }, 1500);
 }
+
+waitThenRun();
