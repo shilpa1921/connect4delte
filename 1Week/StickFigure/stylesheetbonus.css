@@ -1,0 +1,59 @@
+body {
+    position: relative;
+}
+
+.head {
+    width: 200px;
+    height: 200px;
+    border: 10px black solid;
+    border-radius: 50%;
+    position: absolute;
+    left: 190px;
+    top: 20px;
+}
+
+.mainbody {
+    width: 300px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    left: 150px;
+    top: 380px;
+    transform: rotate(0.75turn) translateY(0px);
+}
+
+.Lhand {
+    width: 180px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    transform: rotate(45deg) translateX(300px) translateY(60px);
+    transform-origin: left;
+}
+
+.Rhand {
+    width: 180px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    transform: rotate(135deg) translateX(185px) translateY(-358px);
+    transform-origin: right;
+}
+
+.Lleg {
+    width: 180px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    transform: rotate(135deg) translateY(-585px) translateX(160px);
+    transform-origin: left;
+}
+
+.Rleg {
+    width: 180px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    transform: rotate(45deg) translateX(580px) translateY(160px);
+    transform-origin: left;
+}
