@@ -15,5 +15,4 @@
     }
 
     moveHeadlines();
-    requestAnimationFrame(moveHeadlines);
 })();
