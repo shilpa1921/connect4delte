@@ -1,0 +1,15 @@
+#one {
+    background-color: tomato;
+    font-size: medium;
+    border: solid black 5px;
+}
+#two {
+    background-color: green;
+    font-size: medium;
+    border: solid black 5px;
+}
+#three {
+    background-color: blue;
+    font-size: medium;
+    border: solid black 5px;
+}
