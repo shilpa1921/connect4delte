@@ -1,0 +1,34 @@
+#squere {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-color: turquoise;
+}
+
+textarea {
+    width: 300px;
+    height: 200px;
+}
+
+#box {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border: black solid 3px;
+}
+
+#outerbox {
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+    position: relative;
+}
+
+#innerbox {
+    height: 50px;
+    width: 50px;
+    background-color: teal;
+    top: 75px;
+    left: 75px;
+    position: absolute;
+}
