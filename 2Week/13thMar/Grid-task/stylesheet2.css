@@ -20,7 +20,8 @@
 
 .orange {
     background-color: orange;
-    grid-row: 2 / 3;
+
+    grid-column: 2 /3;
 }
 .black {
     background-color: black;
