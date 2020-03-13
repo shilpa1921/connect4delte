@@ -12,14 +12,15 @@
 }
 
 .gray {
-    background-color: grey;
+    background-color: gray;
     display: grid;
-    grid-template-columns: 150px 150px;
-    grid-template-rows: 150px 150px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .orange {
     background-color: orange;
+    grid-row: 2 / 3;
 }
 .black {
     background-color: black;
@@ -53,6 +54,4 @@
 
 .lightpink {
     background-color: lightpink;
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
 }
