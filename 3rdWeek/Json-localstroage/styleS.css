@@ -1,0 +1,15 @@
+.text {
+    background-color: burlywood;
+    left: 200px;
+    position: relative;
+}
+
+.secret,
+.open {
+    position: relative;
+    left: 200px;
+    background-color: turquoise;
+    padding: 10px;
+
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
