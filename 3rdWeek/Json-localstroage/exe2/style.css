@@ -1,0 +1,13 @@
+.container {
+    background-color: turquoise;
+
+    height: 100vh;
+}
+
+.result {
+    font-size: 20px;
+    font-family: fantasy;
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
