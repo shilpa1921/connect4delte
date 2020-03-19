@@ -34,6 +34,8 @@
                             '<div class = "result">' + "No results." + "</div>";
                     }
                     resultsElem.html(resultsHtml);
+                } else {
+                    return;
                 }
             },
             error: function(err) {
