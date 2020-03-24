@@ -54,7 +54,7 @@
 
                 if (response.next == null || response.items.length < 20) {
                     $("#more").css({
-                        visibility: "visible"
+                        visibility: "hidden"
                     });
                 }
             }
