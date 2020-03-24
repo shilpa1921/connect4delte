@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Raleway"
+            rel="stylesheet"
+        />
+        <title>Pokemon</title>
+    </head>
+    <body>
+        <div class="container"></div>
+
+        <script id="info" type="text/x-handlebars-template">
+            {{#authorsinfo}}
+                <div class="card">
+                    <img src="{{photo}}" alt="">
+                    <div>
+                      <p><strong>Name:</strong> {{name}} </p>
+                      <p> <strong>Born: </strong> {{born}}</p>
+                      <p> <strong>Died: </strong>{{died}}</p>
+                    </div>
+                    <div class="properties type"><h2>selectedWritings:</h2></div>
+                    <div class="values type-values">
+                        {{#selectedWritings}}
+                            <p>{{.}}</p>
+                        {{/selectedWritings}}
+                    </div>
+
+                    <div class="properties abilities"><h2>quote:</h2></div>
+                    <div class="values abilities-values">
+
+                            <p>{{quote}}</p>
+
+                    </div>
+
+                </div>
+            {{/authorsinfo}}
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
