@@ -1,92 +1,106 @@
 (function() {
+    var nextUrl;
+
     $("#submit").on("click", function() {
         var userInput = $("input[name=user-input]").val();
         var dropdownSelectVal = $("select").val();
-        var baseUrl = "https://elegant-croissant.glitch.me/spotify";
+        var baseURL = "https://elegant-croissant.glitch.me/spotify";
 
         $.ajax({
-            url: baseUrl,
+            url: baseURL,
             method: "GET",
+
             data: {
                 query: userInput,
                 type: dropdownSelectVal
             },
             success: function(response) {
-                // console.log("response:", response);
                 response = response.albums || response.artists;
-                console.log("responseAfter:", response);
-                var myHtml = "";
-                var imgUrl = "/default.jpg";
-                for (var i = 0; i < response.items.length; i++) {
-                    // console.log("response.items[i]", response.items[i].name);
-                    if (response.items[i].images[0]) {
-                        imgUrl = response.items[i].images[0].url;
-                    }
-                    myHtml +=
-                        "<div><h4><a href='" +
-                        response.items[i].external_urls.spotify +
-                        "'>" +
-                        response.items[i].name +
-                        "</a></h4><a href='" +
-                        response.items[i].external_urls.spotify +
-                        "'><img src='" +
-                        imgUrl +
-                        "'></a></div>";
-                }
-                $("#results-container").html(myHtml);
-                console.log("response.next: ", response.next);
-                var nextUrl =
-                    response.next &&
-                    response.next.replace(
-                        "api.spotify.com/v1/search",
-                        "elegant-croissant.glitch.me/spotify"
-                    ); // take 2 args, first the pattern that I want to replece, 2nd what I want to replace it with
-                console.log("shilpa", nextUrl.length);
-                var morehtml = "";
 
-                if (nextUrl.length > 0) {
-                    morehtml = "<button>more</button>";
-                    $("#more").html(morehtml);
+                var resultsempty = "";
+                if (response.items.length == 0) {
+                    resultsempty =
+                        "<div>No results found for " +
+                        $("input").val() +
+                        "</div>";
                 }
 
-                $("#more").on("click", function() {
-                    $.ajax({
-                        url: nextUrl,
-                        method: "GET",
-                        success: function(response) {
-                            if (nextUrl.length === 0) {
-                                $("#more")
-                                    .html(morehtml)
-                                    .css({
-                                        visibility: "hidden"
-                                    });
-                            }
-                            console.log("in the secon ajax");
-                            response = response.albums || response.artists;
-                            for (var i = 0; i < response.items.length; i++) {
-                                console.log(
-                                    "response.items[i]INAJAX2",
-                                    response.items[i].name
-                                );
-                                if (response.items[i].images[0]) {
-                                    imgUrl = response.items[i].images[0].url;
-                                }
-                                myHtml +=
-                                    "<div><h4><a href='" +
-                                    response.items[i].external_urls.spotify +
-                                    "'>" +
-                                    response.items[i].name +
-                                    "</a></h><a href='" +
-                                    response.items[i].external_urls.spotify +
-                                    "'><img src='" +
-                                    imgUrl +
-                                    "'></a></div>";
-                            }
-                            $("#results-container").append(myHtml);
-                        }
+                $(".resultsFound").html(resultsempty);
+
+                $("#results-container").html(getResultsHtml(response));
+
+                nextUrl = setNextUrl(response);
+
+                if (response.items.length == 20) {
+                    $("#more").css({
+                        visibility: "visible"
                     });
-                });
+                }
             }
         });
     });
+
+    $("#more").on("click", function() {
+        $.ajax({
+            url: nextUrl,
+            method: "GET",
+
+            success: function(response) {
+                response = response.artists || response.albums;
+
+                $("#results-container").append(getResultsHtml(response));
+
+                nextUrl = setNextUrl(response);
+
+                if (response.next == null || response.items.length < 20) {
+                    $("#more").css({
+                        visibility: "visible"
+                    });
+                }
+            }
+        });
+    });
+    function getResultsHtml(response) {
+        var myHtml = "";
+        var myImage = "";
+        var myName = "";
+        var imgUrl = "/default.jpg";
+        for (var i = 0; i < response.items.length; i++) {
+            if (response.items[i].images[0]) {
+                imgUrl = response.items[i].images[0].url;
+            }
+
+            myName =
+                "<a id='link' href='" +
+                response.items[i].external_urls.spotify +
+                "'>" +
+                "<div class='artistName'>" +
+                response.items[i].name +
+                "</div>" +
+                "</a>";
+
+            myImage =
+                "<a href='" +
+                response.items[i].external_urls.spotify +
+                "'>" +
+                "<img class='image' src='" +
+                imgUrl +
+                "'/>" +
+                "</a>";
+
+            myHtml += "<div class='result'>" + myImage + myName + "</div>";
+        }
+        return myHtml;
+    }
+
+    function setNextUrl(response) {
+        var nextUrl =
+            response.next &&
+            response.next.replace(
+                "api.spotify.com/v1/search",
+                "elegant-croissant.glitch.me/spotify"
+            );
+
+        return nextUrl;
+    }
 })();

@@ -12,3 +12,21 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+#more {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: Arial;
+    font-weight: bold;
+    color: black;
+    visibility: hidden;
+    cursor: pointer;
+    border: 2px black solid;
+}
+.moreButton {
+    text-align: center;
+    margin: 20px 0;
+    /* margin-bottom: 20px; */
+}
