@@ -64,7 +64,7 @@
         var myHtml = "";
         var myImage = "";
         var myName = "";
-        var imgUrl = "/default.jpg";
+        var imgUrl = "default.jpg";
         for (var i = 0; i < response.items.length; i++) {
             if (response.items[i].images[0]) {
                 imgUrl = response.items[i].images[0].url;
