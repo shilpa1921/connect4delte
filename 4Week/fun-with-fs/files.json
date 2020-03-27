@@ -1,0 +1,26 @@
+{
+    "part1": {
+        "a": {
+            "images": {
+                "cats.png": "573350snsjx",
+                "kitty1_150x150.jpg": "9279snsjx",
+                "kitty2_150x150.jpg": "14355snsjx",
+                "kitty3_150x150.jpg": "13387snsjx"
+            },
+            "index.html": "241snsjx",
+            "stylesheet.css": "40snsjx"
+        },
+        "b": {
+            "images": {
+                "boxes.png": "156804snsjx"
+            },
+            "index.html": "243snsjx",
+            "stylesheet.css": "39snsjx"
+        }
+    },
+    "part2": {
+        "index.html": "160snsjx",
+        "script.js": "1998snsjx"
+    },
+    "README.md": "12snsjx"
+}
