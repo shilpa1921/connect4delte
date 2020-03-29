@@ -70,10 +70,11 @@
 #hamburger-menu {
     background-color: rgba(0, 0, 0, 0.1);
     position: fixed;
-    top: 60px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    visibility: hidden;
 }
 
 #menu1 {
