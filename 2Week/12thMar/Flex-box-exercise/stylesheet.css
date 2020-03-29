@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: lawngreen;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    height: 70px;
+    background-color: hotpink;
+}
+
+footer {
+    height: 30px;
+    background-color: gray;
+}

@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+}
+
+#kitties {
+    height: 600px;
+    position: relative;
+    border: 20px solid greenyellow;
+    overflow: hidden;
+}
+
+#kitties img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: translateX(100%);
+}
+
+#kitties img.onscreen {
+    transform: translateX(0);
+    transition-property: transform;
+    transition-duration: 3s;
+}
+
+#kitties img.offscreen-left {
+    transform: translateX(-100%);
+    transition-property: transform;
+    transition-duration: 3s;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 5px solid tomato;
+    margin: 0 5px;
+}
+
+#dots {
+    position: absolute;
+    bottom: 150px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.on {
+    background-color: tomato;
+}
