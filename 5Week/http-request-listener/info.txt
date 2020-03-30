@@ -1,0 +1,2 @@
+Mon Mar 30 2020 17:11:45 GMT+0200 (Central European Summer Time)	GET	/	Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+Mon Mar 30 2020 17:11:45 GMT+0200 (Central European Summer Time)	GET	/favicon.ico	Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
