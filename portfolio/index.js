@@ -35,7 +35,7 @@ http.createServer((req, res) => {
 
     // prevent traversal attacks
 
-    if (!path.normalize(filePath).startsWith(__dirname + "/projects")) {
+    if (!path.normalize(filePath).startsWith(__dirname)) {
         res.statusCode = 403;
         console.log("Error!");
         return res.end();

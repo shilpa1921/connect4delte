@@ -20,9 +20,9 @@ module.exports.generateHtml = () => {
     </head>
     <body>
     <h1>Portfolio</h1>
-    
+
     ${list}
-    
+
     </body>
     <footer></footer>
     </html>`;
