@@ -31,6 +31,7 @@ http.createServer((req, res) => {
     }
     const filePath = __dirname + "/projects" + req.url;
     console.log("filepath ", filePath);
+    console.log("normalised path:", path.normalize(filePath));
     // console.log("url requested: ", req.url);
 
     // prevent traversal attacks
