@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 60px 1fr 1fr 30px;
+    height: 100vh;
+}
+
+.header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.image {
+    background-image: url("img/spices.jpg");
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.info h3 {
+    position: relative;
+    left: 100px;
+    border: 6px solid orange;
+    color: orange;
+    background-color: yellow;
+    margin: 0;
+    width: 150px;
+    padding: 0 10px 0 20px;
+    border-radius: 15px;
+}
+
+#benefits {
+    background: #ccc;
+    padding: 40px;
+    height: 100%;
+    text-align: center;
+}
+.benefit {
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    padding: 0 20px 0 70px;
+    width: 45%;
+
+    margin-bottom: 50px;
+}
+
+.benefit h4 {
+    margin: 0;
+}
+
+.benefit .icon {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 40px;
+}
+.footer {
+    background-color: gray;
+}
+
+#hamburger-menu {
+    background-color: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+}
+
+#menu1 {
+    padding: 20px;
+    height: 100%;
+    width: 300px;
+    max-width: 50%;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+}
+
+#hamburger-menu.on #menu1 {
+    transform: translateX(0);
+    transition-property: transform;
+    transition-duration: 3s;
+}
+
+#hamburger-menu.on {
+    visibility: visible;
+}
+
+#menu1 div {
+    margin: 10px auto;
+    visibility: visible;
+}
+
+#menu1 div a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#x {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    text-decoration: none;
+    color: gray;
+}
+
+#background {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+#box {
+    padding: 20px;
+    height: 150px;
+    width: 500px;
+    max-width: 50%;
+    background-color: white;
+    position: absolute;
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.content1 {
+    font-family: "Times New Roman", Times, serif;
+    padding: 5px;
+}
+
+#box h2 {
+    font-size: 20px;
+}
