@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Connect four",
+        "directory": "connectfour",
+        "description": "This is the first Project and i gave my best to presenr play it"
+    },
+    {
+        "name": "Incremental Search",
+        "directory": "incrementalsearch",
+        "description": "This is one of the best project using ajax and Api"
+    },
+    {
+        "name": "panes",
+        "directory": "panes",
+        "description": "Here you slide a photo one side other side"
+    },
+    {
+        "name": "Spotify",
+        "directory": "spotify",
+        "description": "This also other type of search project"
+    },
+    {
+        "name": "Ticker",
+        "directory": "ticker",
+        "description": "This is used in old website headlines are running on screen and pause them when you hover over them "
+    },
+    {
+        "name": "Webpage",
+        "directory": "webpage",
+        "description": "this is the Spiced webpage project "
+    }
+]

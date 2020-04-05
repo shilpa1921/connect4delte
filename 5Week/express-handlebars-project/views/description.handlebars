@@ -1,0 +1,31 @@
+<div id = "navbar"></div>
+   <ul>{{#project}}
+        <div id="project">
+            <a href="/{{directory}}/description"> 
+            <li >{{name}}</li> 
+          
+           </a>
+        </div>
+        {{/project}}
+        
+
+   <div id="project" ><a href="/" style="color:darkblue; border:blue 1px solid; padding: 5px">Home</a>
+</div>
+
+
+</div>
+
+<h1>{{selectedProject.name}}</h1>
+<div id = "content">
+
+<img src="/{{selectedProject.directory}}/screenshot.png"  id="box">
+
+<h3>{{selectedProject.description}}</h3>
+
+
+
+<a href="/{{selectedProject.directory}}" target="_blank">Click here to see the  project in a new tab</a>
+<br>  
+</div>
+
+
