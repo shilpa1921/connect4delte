@@ -1,31 +1,37 @@
-<div id = "navbar"></div>
-   <ul>{{#project}}
-        <div id="project">
-            <a href="/{{directory}}/description"> 
-            <li >{{name}}</li> 
+<div id = "descpage"></div>
+
+     <div id = "navbar">
+
+     <ul>{{#project}}
+          <div id="project">
+               <a href="/{{directory}}/description"> 
+               <li >{{name}}</li> 
+               
+               </a>
+          </div>
+          {{/project}}
           
-           </a>
-        </div>
-        {{/project}}
-        
 
-   <div id="project" ><a href="/" style="color:darkblue; border:blue 1px solid; padding: 5px">Home</a>
-</div>
+     <div id="project" ><a href="/" style="color:darkblue; border:blue 1px solid; padding: 5px">Home</a>
+     </div>
 
 
-</div>
+     </div>
+     <div id = "main"></div>
 
-<h1>{{selectedProject.name}}</h1>
-<div id = "content">
+          <h1>{{selectedProject.name}}</h1>
+          <div id = "content">
 
-<img src="/{{selectedProject.directory}}/screenshot.png"  id="box">
+          <img src="/{{selectedProject.directory}}/screenshot.png"  id="box">
 
-<h3>{{selectedProject.description}}</h3>
+          <h3>{{selectedProject.description}}</h3>
 
 
 
-<a href="/{{selectedProject.directory}}" target="_blank">Click here to see the  project in a new tab</a>
-<br>  
+          <a href="/{{selectedProject.directory}}" target="_blank">Click here to see the  project in a new tab</a>
+          <br>  
+          </div>
+     </div>
 </div>
 
 
