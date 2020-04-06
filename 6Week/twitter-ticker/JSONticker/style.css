@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#ticker {
+    overflow: hidden;
+    height: 1.5em;
+    width: 100%;
+    position: relative;
+}
+
+#headlines {
+    white-space: nowrap;
+    position: absolute;
+    left: 100%;
+}
+
+#headlines a {
+    padding-right: 40px;
+}
+a:hover {
+    color: red;
+}
