@@ -1,11 +1,10 @@
 const express = require("express");
 const app = express();
 const { getToken, getTweets, filterTweets } = require("./twitter.js");
-
 app.use(express.static("./JSONticker"));
 
 app.get("/data.json", (req, res) => {
-    console.log("need to server json");
+    console.log("need to server Json");
     getToken(function (err, bearerToken) {
         if (err) {
             console.log("error in getToken", err);
@@ -28,4 +27,4 @@ app.get("/data.json", (req, res) => {
     });
 });
 
-app.listen(8080, console.log("server is listeining"));
+app.listen(8084, console.log("server is listeining"));

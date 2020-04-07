@@ -1,8 +1,6 @@
 const https = require("https");
-//const secrets = require("./secrets.json");
 const { consumerKey, consumerSecret } = require("./secrets.json");
 
-//this function gets the bearer token from twitter
 module.exports.getToken = (callback) => {
     let creds = `${consumerKey}:${consumerSecret}`;
     let encodedCreds = Buffer.from(creds).toString("base64");
@@ -43,9 +41,9 @@ module.exports.getTweets = (bearerToken, callback) => {
     const Options2 = {
         host: "api.twitter.com",
         path:
-            "/1.1/statuses/user_timeline.json?screen_name=twitterapi&tweet_mode=extended",
+            "/1.1/statuses/user_timeline.json?screen_name=theonion&tweet_mode=extended",
         method: "GET",
-        screen_name: "twitterapit",
+
         headers: {
             Authorization: "Bearer " + bearerToken,
         },
@@ -73,8 +71,6 @@ module.exports.getTweets = (bearerToken, callback) => {
                 parsedTweets
             );
 
-            console.log("shilpa:", parsedTweets[6].full_text);
-
             callback(null, parsedTweets);
         });
     };
@@ -82,10 +78,20 @@ module.exports.getTweets = (bearerToken, callback) => {
     const req = https.request(Options2, cb2);
     req.end();
 };
-
-//cleans up response from Twitter API
 module.exports.filterTweets = (tweets) => {
-    //will be passed as array of objects
-    //loop through and extract the relevant info text: and url:
-    //synchronous
+    let tweetArray = [];
+
+    let url = "";
+    for (let i = 0; i < tweets.length; i++) {
+        if (tweets[i].entities.urls.length == 1) {
+            url = tweets[i].entities.urls[0].url;
+        }
+        let fulltext = tweets[i].full_text;
+        let splittext = fulltext.split("http", 3);
+        let text = splittext[0];
+
+        tweetArray.push({ url, text });
+    }
+
+    return tweetArray;
 };
