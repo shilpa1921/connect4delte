@@ -18,7 +18,7 @@ test("album names are in alphabetical order", () => {
             albums: {
                 items: [
                     {
-                        name: "Balbum Two",
+                        name: "assdf Two",
                     },
                 ],
             },
@@ -27,7 +27,7 @@ test("album names are in alphabetical order", () => {
             albums: {
                 items: [
                     {
-                        name: "Calbum Three",
+                        name: "dfhthrt Three",
                     },
                 ],
             },
