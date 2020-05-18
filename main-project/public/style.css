@@ -1,0 +1,299 @@
+* {
+    background-color: linen;
+    box-sizing: border-box;
+}
+
+main {
+    min-height: 100vh;
+    padding: 20px;
+    margin-top: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.reg {
+    text-align: center;
+    background-color: lightcoral;
+    border: darkkhaki solid 2px;
+    max-width: 50%;
+    margin-left: 25%;
+    padding: 25px;
+}
+
+#passwordreset {
+    text-align: center;
+
+    border: darkkhaki solid 2px;
+    max-width: 50%;
+    margin-left: 25%;
+    padding: 25px;
+}
+
+#logo img {
+    height: 60px;
+    border: salmon solid 2px;
+    width: 100px;
+}
+.profile-pic {
+    float: right;
+    height: 60px;
+    width: 100px;
+    right: 0;
+    top: -85px;
+    position: relative;
+}
+.login {
+    text-align: center;
+    background-color: lightcoral;
+    border: darkkhaki solid 2px;
+    max-width: 50%;
+    margin-left: 25%;
+    padding: 25px;
+}
+#heading {
+    background-color: lightcoral;
+}
+
+#reset {
+    background-color: lightcoral;
+}
+
+#head {
+    background-color: lightcoral;
+    margin-bottom: auto;
+}
+
+#register {
+    background-color: lightcoral;
+    margin-top: 25px;
+}
+
+input {
+    margin: 10px;
+}
+
+#welcome h1 {
+    text-align: center;
+    color: darkred;
+}
+
+#upload {
+    border: lightseagreen solid 3px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin: 30px;
+    padding: 0;
+    width: 50%;
+    left: 250px;
+    position: absolute;
+    box-sizing: border-box;
+}
+#file {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#close {
+    padding-left: 96%;
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+}
+button {
+    background-color: #000;
+    border: 1px solid #000;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#profilepic {
+    position: relative;
+    top: 10px;
+    display: block;
+    right: 70%;
+}
+#profilepic img {
+    height: 200px;
+    width: 200px;
+    margin: 0;
+}
+
+#addbio {
+    border: lightseagreen 3px solid;
+    padding: 0;
+    width: 70px;
+    text-align: center;
+    background-color: maroon;
+    color: mediumaquamarine;
+    left: 20%;
+    position: relative;
+}
+#prof-pic-container {
+    border: 2px rgb(85, 85, 85) solid;
+    border-radius: 10px;
+    margin: 20px;
+    top: 30px;
+    float: right;
+    position: relative;
+    cursor: pointer;
+}
+#prof-pic-container:hover {
+    background-color: white;
+}
+
+#prof-pic-div {
+    text-align: center;
+}
+
+.profile-pic {
+    /* border-bottom: 2px rgb(85, 85, 85) solid; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 20px;
+    background-color: whitesmoke;
+    /* padding: 10px; */
+    max-height: 150px;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+#prof-pic-div p {
+    /* border: 1px red solid; */
+    margin: 0;
+}
+
+/* ------------------ Upload Profile Pic Modal ------------------ */
+#upload-container {
+    border: 1px blue solid;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#upload-modal-div {
+    border: 2px grey solid;
+    border-radius: 20px;
+
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+
+#app-componenet {
+    height: 100vh;
+}
+
+#bio {
+    font-style: italic;
+    color: tomato;
+    font-size: 40px;
+}
+
+#pic-in-otherprofile {
+    height: 250px;
+    width: 300px;
+}
+
+#pic-in-profile {
+    height: 300px;
+    width: 300px;
+}
+
+.profilepic1 {
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+}
+
+#welcome11 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+#picandtext {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 10px;
+    margin-bottom: 30px;
+    transition: transform 0.2s;
+    border: springgreen solid 2px;
+}
+#picandtext:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    border: salmon solid 2px;
+}
+
+#doc {
+    border: salmon solid 3px;
+}
+#pat {
+    border: salmon solid 3px;
+}
+#nav {
+    display: grid;
+    grid-template-columns: 1fr 100px 85px 100px 120px;
+    grid-gap: 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+#navbox {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    top: 20px;
+    text-decoration: none;
+
+    background-color: salmon;
+}
+
+#present div {
+    box-sizing: border-box;
+
+    background-color: salmon;
+}
+
+ul {
+    padding-left: 0;
+}
+
+#cat-nav button {
+    margin-right: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#seemore {
+    text-align: center;
+}
+
+#profilepage {
+    margin-top: 30px;
+}
+
+#footer {
+    top: 50px;
+    position: relative;
+    margin-bottom: 0;
+    background-color: lightgrey;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+#footer h2 {
+    background-color: lightgrey;
+}
