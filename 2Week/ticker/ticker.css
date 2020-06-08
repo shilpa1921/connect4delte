@@ -4,6 +4,10 @@
 
 body {
     margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #ticker {
@@ -24,4 +28,21 @@ body {
 }
 a:hover {
     color: red;
+}
+
+#ticker-bottom {
+    overflow: hidden;
+    height: 1.5em;
+    width: 100%;
+    position: relative;
+}
+
+#headlines-bottom {
+    white-space: nowrap;
+    position: absolute;
+    right: 100%;
+}
+
+#headlines-bottom a {
+    padding-right: 40px;
 }

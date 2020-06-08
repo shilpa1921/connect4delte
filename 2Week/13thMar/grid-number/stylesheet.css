@@ -1,0 +1,54 @@
+main {
+    background-color: lightgrey;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    grid-auto-rows: 500px;
+    grid-gap: 20px;
+}
+
+p {
+    font-size: 30px;
+    color: white;
+}
+
+.section-1 {
+    background: orangered;
+}
+
+.section-2 {
+    background: yellowgreen;
+}
+
+.section-3 {
+    background: blueviolet;
+    justify-self: center;
+    align-self: center;
+}
+
+.section-4 {
+    background: palevioletred;
+}
+
+.section-5 {
+    background: royalblue;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.section-6 {
+    background: goldenrod;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.section-7 {
+    background: crimson;
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+}
+
+.section-8 {
+    background: darkslategray;
+}
